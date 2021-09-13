@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Plocksties"
+  given-names: "Franz"
+  orcid: "https://orcid.org/0000-0003-0433-7703"
+title: "The SofTware dEfined impLantabLe modular plAtform (STELLA) for preclinical deep brain stimulation"
+version: 1.0
+date-released: 2021-09-13
+url: "https://github.com/SFB-ELAINE/STELLA/"
