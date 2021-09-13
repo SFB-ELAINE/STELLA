@@ -1,0 +1,1 @@
+"./ADC.obj" "./BlinkPattern.obj" "./Booster.obj" "./Comparator.obj" "./DigiPot.obj" "./SPI.obj" "./main.obj" "../lnk_msp430g2553.cmd" -llibc.a 

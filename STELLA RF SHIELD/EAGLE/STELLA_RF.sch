@@ -8824,8 +8824,6 @@ DIN A4, landscape with extra doc field</description>
 <text x="203.2" y="129.54" size="1.778" layer="95">X11</text>
 <text x="203.2" y="124.46" size="1.778" layer="95">X12</text>
 <text x="203.2" y="119.38" size="1.778" layer="95">X13</text>
-<text x="164.084" y="25.654" size="2.54" layer="106">Schematic: Franz Plocksties 
-Layout: Uwe Knüpfer</text>
 <text x="251.46" y="7.62" size="2.54" layer="106">R0</text>
 <text x="174.244" y="1.27" size="2.54" layer="106">19.01.2020</text>
 <text x="67.564" y="64.516" size="2.1844" layer="106">Matching network design is based on 
