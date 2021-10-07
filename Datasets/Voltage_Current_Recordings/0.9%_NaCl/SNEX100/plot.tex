@@ -1,0 +1,194 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+
+\pgfplotsset{
+    compat=1.3, 
+    every axis/.append style={scale only axis,
+    height=2.25cm, width=2.5cm, xmin=-1, xmax=120,grid=major, x grid style={lightgray!92.02614379084967!black},
+      y grid style={lightgray!92.02614379084967!black},tick align=outside, tick pos=left}
+}
+
+\pgfplotsset{every tick label/.append style={font=\footnotesize}, label style={font=\footnotesize}}
+%\pgfplotsset{yticklabel style={text width=1em,align=right}}
+
+\begin{document}
+\begin{tikzpicture}
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%  SNEX 100  %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%% VOLTAGE %%%%%%%%
+
+    \begin{axis}[%
+    name=plot1,
+    xticklabels={,,},
+  %  xlabel={Time [$\mu$s]},
+    ylabel={Voltage [V]},
+    yticklabel style={text width=2em, align=right},
+    xmin=-10,
+    xmax=130,
+   % ytick = {0, 0.4, 0.8},
+    ymin=-0.1,
+   ymax=0.8,
+]
+    \addplot[line width=1.0pt, color=color0] table [x=Time/us, y=Voltage/V, col sep=comma] {snex100_voltage_50uA_saline_no_discharge_resistance.csv};
+
+    \addplot[line width=1.2pt, color=orange, dotted] table [x=Time/us, y=Voltage/V, col sep=comma] {snex100_voltage_50uA_saline_digital60_resistance.csv};
+    \end{axis}
+    
+    
+    \begin{axis}[%
+    name=plot2,
+  %  xlabel={Time [$\mu$s]},
+   yticklabels={,,},
+   xticklabels={,,},
+    xmin=-10,
+    xmax=130,
+    ymin=-0.1,
+    ymax=0.8,
+    at=(plot1.right of south east), anchor=left of south west,
+    ]
+    \addplot[line width= 1.0pt, color=color0] table [x=Time/us, y=Voltage/V, col sep=comma] {snex100_voltage_100uA_saline_no_discharge_resistance.csv};
+
+    \addplot[line width=1.2pt, color=orange, dotted] table [x=Time/us, y=Voltage/V, col sep=comma] {snex100_voltage_100uA_saline_digital60_resistance.csv};
+    \end{axis}
+    
+%%%%%%% CURRENT %%%%%%%%
+    
+        \begin{axis}[%
+    name=plot5,
+    xlabel={Time [$\mu$s]},
+    ylabel={Current [$\mu$A]},
+    yticklabel style={text width=2em, align=right},
+    xmin=-10,
+    xmax=130,
+    ymin=-380,
+    ymax=130,
+    ytick = {-200, 0, 50, 100},
+  %  yticklabel style={rotate=-10},
+   at=(plot1.below south west), anchor=above north west,
+]
+    \addplot[line width=1.0pt, color=color0] table [x=Time/us, y=Current/uA, col sep=comma] {snex100_current_50uA_saline_no_discharge_resistance.csv};
+
+    \addplot[line width=1.2pt, color=orange, dotted] table [x=Time/us, y=Current/uA, col sep=comma] {snex100_current_50uA_saline_digital60_resistance.csv};
+    \end{axis}
+    
+    \begin{axis}[%
+    name=plot6,
+    yticklabels={,,},
+    xlabel={Time [$\mu$s]},
+    xmin=-10,
+    xmax=130,
+    ymin=-380,
+    ymax=130,    
+    extra y ticks = {100},
+    at=(plot5.right of south east), anchor=left of south west,
+]
+    \addplot[line width= 1.0pt, color=color0] table [x=Time/us, y=Current/uA, col sep=comma] {snex100_current_100uA_saline_no_discharge_resistance.csv};
+
+    \addplot[line width=1.2pt, color=orange, dotted] table [x=Time/us, y=Current/uA, col sep=comma] {snex100_current_100uA_saline_digital60_resistance.csv};
+    \end{axis}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%  Unipolar  %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% VOLTAGE %%%%%%%%
+
+    \begin{axis}[%
+    name=plot3,
+    yticklabels={,,},
+    xticklabels={,,},
+%    xlabel={Time [$\mu$s]},
+    %ylabel={Voltage [V]},
+    xmin=-10,
+    xmax=120,
+    ymin=-0.1,
+    ymax=0.8,
+    at=(plot2.right of south east), anchor=left of south west,
+    ]
+    \addplot[line width= 1.0pt, color0] table [x=Time/us, y=Voltage/V, col sep=comma] {unipolar_voltage_50uA_saline_no_discharge_resistance.csv};
+
+    \addplot[line width=1.2pt, color=orange, dotted] table [x=Time/us, y=Voltage/V, col sep=comma] {unipolar_voltage_50uA_saline_digital50_resistance.csv};
+
+    \end{axis}
+    
+    \begin{axis}[%
+    name=plot4,
+    yticklabels={,,},
+    xticklabels={,,},
+%    xlabel={Time [$\mu$s]},
+    %ylabel={Voltage [V]},
+    xmin=-10,
+    xmax=120,
+    ymin=-0.1,
+    ymax=0.8,
+    at=(plot3.right of south east), anchor=left of south west,
+    ]
+    \addplot[line width= 1.0pt, color0] table [x=Time/us, y=Voltage/V, col sep=comma] {unipolar_voltage_100uA_saline_no_discharge_resistance.csv};
+
+    \addplot[line width=1.2pt, color=orange, dotted] table [x=Time/us, y=Voltage/V, col sep=comma] {unipolar_voltage_100uA_saline_digital50_resistance.csv};
+
+    \end{axis}
+    
+%%%%%%% CURRENT %%%%%%%%
+   
+    \begin{axis}[%
+    name=plot7,
+    yticklabels={,,},
+    xlabel={Time [$\mu$s]},
+    %ylabel={Current [$\mu$A]},
+    xmin=-10,
+    xmax=120,
+    ymin=-380,
+    ymax=130,
+    extra y ticks = {50},
+    at=(plot6.right of south east), anchor=left of south west,
+    ]
+    \addplot[line width= 1.0pt, color0] table [x=Time/us, y=Current/uA, col sep=comma] {unipolar_current_50uA_saline_no_discharge_resistance.csv};
+
+    \addplot[line width= 1.2pt, color=orange, dotted] table [x=Time/us, y=Current/uA, col sep=comma] {unipolar_current_50uA_saline_digital50_resistance.csv};
+
+    \end{axis}
+    
+    \begin{axis}[%
+    name=plot8,
+    yticklabels={,,},
+    xlabel={Time [$\mu$s]},
+    xmin=-10,
+    xmax=120,
+    ymin=-380,
+    ymax=130,
+    extra y ticks = {100},
+    at=(plot7.right of south east), anchor=left of south west,
+    ]
+    \addplot[line width= 1.0pt, color0] table [x=Time/us, y=Current/uA, col sep=comma] {unipolar_current_100uA_saline_no_discharge_resistance.csv};
+
+    \addplot[line width= 1.2pt, color=orange, dotted] table [x=Time/us, y=Current/uA, col sep=comma] {unipolar_current_100uA_saline_digital50_resistance.csv};
+
+    \end{axis}
+
+\draw [dashed, line width=0.8pt] (5.6,2.7) -- (5.6,-3.8);   
+
+\node[align=center] at (2.7,2.5) {\small \textbf{Bipolar}};
+\node[align=center] at (8.5,2.5) {\small \textbf{Unipolar}};
+
+\node[align=center] at (2.25,2) {\footnotesize (a)};
+\node[align=center] at (2.25,-0.7) {\footnotesize (b)};
+\node[align=center] at (5.15,2) {\footnotesize (c)};
+\node[align=center] at (5.15,-0.7) {\footnotesize (d)};
+\node[align=center] at (8.05,2) {\footnotesize (e)};
+\node[align=center] at (8.05,-0.7) {\footnotesize (f)};
+\node[align=center] at (10.95,2) {\footnotesize (g)};
+\node[align=center] at (10.95,-0.7) {\footnotesize (h)};
+
+
+\end{tikzpicture}
+\end{document}
