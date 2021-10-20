@@ -28,11 +28,11 @@
 | Mounting                    | Head or Back      | Back                | Head              | Head              | Head                | Back              | Implant             | Implant               | Head + Implant      | Implant             | Implant + cage                               | Head              | Implant             | Head            | Head              | Implant                                        |
 | Open source†                | No                | No                  | No                | No                | Complete            | No                | No                  | No                    | No                  | No                  | Incomplete                                   | No                | No                  | No              | Incomplete        | Complete                                       |
 
-*Estimated from photographic scale
-‡Duty Cycle
-Including §battery, {housing, ¶both
-†Including all design/layout/firmware files and datasets for reproduction
-¤ Refers to the stimulation parameters (1x100 µA, 130 Hz, 60 µs) for LPM3 at a boost voltage of 3.1 V 
-□ Highly flexible regarding needed stimulation time and rodent’s size and weight
-♣Battery voltage / ♠load impedance out of range indication
-◆ Extendable by inter-module communication
+*Estimated from photographic scale <br />
+‡Duty Cycle <br />
+Including §battery, {housing, ¶both <br />
+†Including all design/layout/firmware files and datasets for reproduction <br />
+¤ Refers to the stimulation parameters (1x100 µA, 130 Hz, 60 µs) for LPM3 at a boost voltage of 3.1 V  <br />
+□ Highly flexible regarding needed stimulation time and rodent’s size and weight <br />
+♣Battery voltage / ♠load impedance out of range indication <br />
+◆ Extendable by inter-module communication <br />
