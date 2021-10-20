@@ -3,7 +3,7 @@
 ## Comparison of existing neurostimulators with STELLA
 
 
-|                             | Ewing (2013) [56] | Kouzani (2017) [27] | Kölbl (2016) [26] | Fluri (2017) [24] | Pinnell (2018) [29] | Adams (2019) [21] | Harnack (2008) [32] | Fleischer (2020) [57] | de Haas (2012) [31] | Hentall (2013) [33] | Millard (2007) [34]                          | Forni (2012) [25] | Alpaugh (2019) [30] | Liu (2017) [28] | Arfin (2009) [22] | STELLA 3.0 PEEK                                |
+|                             | Ewing (2013) [56] | Kouzani (2017) [27] | Kölbl (2016) [26] | Fluri (2017) [24] | Pinnell (2018) [29] | Adams (2019) [21] | Harnack (2008) [32] | Fleischer (2020) [57] | de Haas (2012) [31] | Hentall (2013) [33] | Millard (2007) [34]                          | Forni (2012) [25] | Alpaugh (2019) [30] | Liu (2017) [28] | Arfin (2009) [22] | STELLA                                         |
 |-----------------------------|-------------------|---------------------|-------------------|-------------------|---------------------|-------------------|---------------------|-----------------------|---------------------|---------------------|----------------------------------------------|-------------------|---------------------|-----------------|-------------------|------------------------------------------------|
 | Current amplitude (µA)      | 13-1000           | 200                 | 26-2036           | 10-500            | 20-2000             | -625              | 50-600              | up to 300             | 20-100              | 20-100              | 100-500                                      | 50-120            | 149                 | 200-500         | 10-1000           | 42-100                                         |
 | Pulse-width (µs)            | 1µs-100% DC‡      | 90                  | 0.5µs-100% DC‡    | 60-500            | 10µs-100% DC‡       | 20 (min)          | 52                  | 60-500                | 60                  | 100-1000            | 25-250                                       | 0-80              | 103/111             | 30-1400         | 180               | 1µs-100% DC‡                                   |
@@ -27,3 +27,12 @@
 | Status readout              | ♣                 | Programming status  | n/a               | On/Off/♠          | On/Off              | On/Off/♣          | Program var.        | On/Off                | On/Off/♠            | Program var.        | On/Off                                       | n/a               | ♣                   | On/Off/♣♠       | On/Off            | On/Off/♣♠◆                                     |
 | Mounting                    | Head or Back      | Back                | Head              | Head              | Head                | Back              | Implant             | Implant               | Head + Implant      | Implant             | Implant + cage                               | Head              | Implant             | Head            | Head              | Implant                                        |
 | Open source†                | No                | No                  | No                | No                | Complete            | No                | No                  | No                    | No                  | No                  | Incomplete                                   | No                | No                  | No              | Incomplete        | Complete                                       |
+
+*Estimated from photographic scale
+‡Duty Cycle
+Including §battery, {housing, ¶both
+†Including all design/layout/firmware files and datasets for reproduction
+¤ Refers to the stimulation parameters (1x100 µA, 130 Hz, 60 µs) for LPM3 at a boost voltage of 3.1 V 
+□ Highly flexible regarding needed stimulation time and rodent’s size and weight
+♣Battery voltage / ♠load impedance out of range indication
+◆ Extendable by inter-module communication
