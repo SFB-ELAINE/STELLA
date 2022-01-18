@@ -1,0 +1,1032 @@
+******************************************************************************
+                  MSP430 Linker PC v18.12.2                    
+******************************************************************************
+>> Linked Tue Sep 28 12:57:06 2021
+
+OUTPUT FILE NAME:   <STELLA3_1_RF.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 0000e9b2
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SFR                   00000000   00000010  00000000  00000010  RWIX
+  PERIPHERALS_8BIT      00000010   000000f0  00000000  000000f0  RWIX
+  PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
+  RAM                   00000200   00000200  0000010e  000000f2  RWIX
+  INFOD                 00001000   00000040  00000000  00000040  RWIX
+  INFOC                 00001040   00000040  00000000  00000040  RWIX
+  INFOB                 00001080   00000040  00000000  00000040  RWIX
+  INFOA                 000010c0   00000040  00000000  00000040  RWIX
+  FLASH                 0000c000   00003fde  00002bba  00001424  RWIX
+  BSLSIGNATURE          0000ffde   00000002  00000002  00000000  RWIX  ffff 
+  INT00                 0000ffe0   00000002  00000002  00000000  RWIX
+  INT01                 0000ffe2   00000002  00000000  00000002  RWIX
+  INT02                 0000ffe4   00000002  00000002  00000000  RWIX
+  INT03                 0000ffe6   00000002  00000002  00000000  RWIX
+  INT04                 0000ffe8   00000002  00000000  00000002  RWIX
+  INT05                 0000ffea   00000002  00000002  00000000  RWIX
+  INT06                 0000ffec   00000002  00000002  00000000  RWIX
+  INT07                 0000ffee   00000002  00000002  00000000  RWIX
+  INT08                 0000fff0   00000002  00000002  00000000  RWIX
+  INT09                 0000fff2   00000002  00000002  00000000  RWIX
+  INT10                 0000fff4   00000002  00000002  00000000  RWIX
+  INT11                 0000fff6   00000002  00000002  00000000  RWIX
+  INT12                 0000fff8   00000002  00000002  00000000  RWIX
+  INT13                 0000fffa   00000002  00000002  00000000  RWIX
+  INT14                 0000fffc   00000002  00000002  00000000  RWIX
+  RESET                 0000fffe   00000002  00000002  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.data      0    00000200    00000082     UNINITIALIZED
+                  00000200    0000003c     Comparator.obj (.data:dbs_array)
+                  0000023c    00000024     main.obj (.data)
+                  00000260    00000010     main.obj (.data:data_new)
+                  00000270    0000000e     Comparator.obj (.data)
+                  0000027e    00000004     ADC.obj (.data)
+
+.bss       0    00000282    0000003c     UNINITIALIZED
+                  00000282    00000020     (.common:VBoostArray)
+                  000002a2    00000002     (.common:VRef_test)
+                  000002a4    00000002     (.common:VRef_test_left)
+                  000002a6    00000002     (.common:VRef_test_right)
+                  000002a8    00000002     (.common:i_left)
+                  000002aa    00000002     (.common:i_new_imp)
+                  000002ac    00000002     (.common:imp)
+                  000002ae    00000002     (.common:k)
+                  000002b0    00000002     (.common:loop_count)
+                  000002b2    00000002     (.common:p)
+                  000002b4    00000002     (.common:stimulation_clk)
+                  000002b6    00000002     (.common:timer_tar_PW_left)
+                  000002b8    00000002     (.common:timer_tar_PW_right)
+                  000002ba    00000002     (.common:timer_tar_count_left)
+                  000002bc    00000002     (.common:timer_tar_count_right)
+
+.stack     0    000003b0    00000050     UNINITIALIZED
+                  000003b0    00000002     rts430_eabi.lib : boot.c.obj (.stack)
+                  000003b2    0000004e     --HOLE--
+
+.text      0    0000c000    00002b84     
+                  0000c000    00000a5c     main.obj (.text:main)
+                  0000ca5c    00000286     rts430_eabi.lib : frcmpyd.c.obj (.text:__TI_frcmpyd)
+                  0000cce2    00000286     cc2500.obj (.text:cc2500_init)
+                  0000cf68    0000026e     rts430_eabi.lib : mpyd.c.obj (.text:__mspabi_mpyd)
+                  0000d1d6    00000238     cc2500.obj (.text:cc2500_transmit_arr_new)
+                  0000d40e    000001bc     main.obj (.text:ImpedanceStatus)
+                  0000d5ca    00000156     main.obj (.text:ImpChk)
+                  0000d720    00000132     Comparator.obj (.text:sample_dbs)
+                  0000d852    00000112     cc2500.obj (.text:cc2500_transmit_arr)
+                  0000d964    000000fa     Comparator.obj (.text:_compare)
+                  0000da5e    000000d2     Comparator.obj (.text:dbs_pw)
+                  0000db30    000000c4     rts430_eabi.lib : fs_mpy.asm.obj (.text)
+                  0000dbf4    000000bc     Comparator.obj (.text:dbs_freq)
+                  0000dcb0    000000ac     rts430_eabi.lib : fltlid.c.obj (.text:__mspabi_fltlid)
+                  0000dd5c    0000009e     Comparator.obj (.text:_compare_helper)
+                  0000ddfa    0000008a     rts430_eabi.lib : fltuld.c.obj (.text:__mspabi_fltuld)
+                  0000de84    0000008a     cc2500.obj (.text:led_init_match)
+                  0000df0e    0000007c     rts430_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  0000df8a    00000078     SPI.obj (.text:SPISetup)
+                  0000e002    00000076     BlinkPattern.obj (.text:PacketNotReceive)
+                  0000e078    00000074     rts430_eabi.lib : fixdul.c.obj (.text:__mspabi_fixdul)
+                  0000e0ec    00000070     DigiPot.obj (.text:Set_DIGIPOT)
+                  0000e15c    00000070     cc2500.obj (.text:cc2500_receive_wor)
+                  0000e1cc    00000068     ADC.obj (.text:CheckVRef)
+                  0000e234    00000066     main.obj (.text:Port_2)
+                  0000e29a    0000005c     main.obj (.text:PWM)
+                  0000e2f6    0000005c     rts430_eabi.lib : lsr32.asm.obj (.text:l_lsr_const)
+                  0000e352    00000054     Comparator.obj (.text:Port_1)
+                  0000e3a6    00000054     SPI.obj (.text:SPI_writeData)
+                  0000e3fa    00000052     cc2500.obj (.text:awake_cc2500)
+                  0000e44c    0000004c     rts430_eabi.lib : lsr16.asm.obj (.text)
+                  0000e498    0000004a     BlinkPattern.obj (.text:StartErrorRecognitionPattern)
+                  0000e4e2    00000048     cc2500.obj (.text:cc2500_nwor_init)
+                  0000e52a    00000048     cc2500.obj (.text:cc2500_wor_init)
+                  0000e572    00000046     rts430_eabi.lib : fs_tou.asm.obj (.text)
+                  0000e5b8    00000044     ADC.obj (.text:CheckVBoost)
+                  0000e5fc    00000042     rts430_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  0000e63e    0000003e                     : asr32.asm.obj (.text:l_asr_const)
+                  0000e67c    0000003e                     : lsl32.asm.obj (.text:l_lsl_const)
+                  0000e6ba    0000003a     main.obj (.text:count_rtc)
+                  0000e6f4    00000036     cc2500.obj (.text:led_init_nmatch)
+                  0000e72a    00000034     BlinkPattern.obj (.text:LED_FLASH3)
+                  0000e75e    00000030     ADC.obj (.text:CheckVBoostNew)
+                  0000e78e    0000002e     cc2500.obj (.text:cc2500_SPIReadStatus)
+                  0000e7bc    0000002c     ADC.obj (.text:_helper)
+                  0000e7e8    0000002c     cc2500.obj (.text:cc2500_read_reg)
+                  0000e814    0000002c     rts430_eabi.lib : asr16.asm.obj (.text)
+                  0000e840    0000002c                     : lsl16.asm.obj (.text)
+                  0000e86c    0000002a     main.obj (.text:ini_f_pw_variables)
+                  0000e896    00000028     cc2500.obj (.text:pwd_mode_cc2500)
+                  0000e8be    00000026     rts430_eabi.lib : mult32.asm.obj (.text)
+                  0000e8e4    00000024     main.obj (.text:Timer1_A0)
+                  0000e908    00000024     cc2500.obj (.text:cc2500_strobe1)
+                  0000e92c    00000024     rts430_eabi.lib : fs_utof.asm.obj (.text)
+                  0000e950    00000022     cc2500.obj (.text:cc2500_reset)
+                  0000e972    00000020     main.obj (.text:GDO0Setup)
+                  0000e992    00000020     main.obj (.text:HallSensorSetup)
+                  0000e9b2    0000001c     rts430_eabi.lib : boot.c.obj (.text:_c_int00_noargs)
+                  0000e9ce    0000001a     ADC.obj (.text:CheckVBattery)
+                  0000e9e8    0000001a     Booster.obj (.text:RestartBooster)
+                  0000ea02    0000001a     cc2500.obj (.text:cc2500_strobe)
+                  0000ea1c    00000018     main.obj (.text:setupTimer)
+                  0000ea34    00000016     main.obj (.text:ComparatorSetup)
+                  0000ea4a    00000016     ADC.obj (.text:temp_read)
+                  0000ea60    00000014     rts430_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  0000ea74    00000014                     : memset.c.obj (.text:memset)
+                  0000ea88    00000012     ADC.obj (.text:ADC10_ISR)
+                  0000ea9a    00000012     rts430_eabi.lib : fixdu.c.obj (.text:__mspabi_fixdu)
+                  0000eaac    00000012                     : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0000eabe    00000012                     : lsr32.asm.obj (.text:l_lsr)
+                  0000ead0    00000012                     : memcpy.c.obj (.text:memcpy)
+                  0000eae2    00000012     Comparator.obj (.text:setupTimer_freq)
+                  0000eaf4    00000010     rts430_eabi.lib : epilog.asm.obj (.text)
+                  0000eb04    0000000e     main.obj (.text:DisableStimulation)
+                  0000eb12    0000000e     main.obj (.text:EnableStimulation)
+                  0000eb20    0000000c     rts430_eabi.lib : fltid.c.obj (.text:__mspabi_fltid)
+                  0000eb2c    00000008     BlinkPattern.obj (.text:ContinuousTxnPattern)
+                  0000eb34    00000008     main.obj (.text:DisableGDO0)
+                  0000eb3c    00000008     main.obj (.text:DisableHallSensor)
+                  0000eb44    00000008     main.obj (.text:EnableGDO0)
+                  0000eb4c    00000008     main.obj (.text:EnableHallSensor)
+                  0000eb54    00000008     main.obj (.text:LEDSetup)
+                  0000eb5c    00000008     BlinkPattern.obj (.text:StimulationOffPattern)
+                  0000eb64    00000008     rts430_eabi.lib : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000eb6c    00000006                     : fltud.c.obj (.text:__mspabi_fltud)
+                  0000eb72    00000006                     : exit.c.obj (.text:abort)
+                  0000eb78    00000006     Comparator.obj (.text:stopTimer_freq)
+                  0000eb7e    00000004     rts430_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  0000eb82    00000002                     : startup.c.obj (.text:_system_post_cinit)
+
+.const     0    0000eb84    00000002     
+                  0000eb84    00000002     main.obj (.const:.string:$P$T0$1)
+
+.cinit     0    0000eb86    00000034     
+                  0000eb86    00000021     (.cinit..data.load) [load image, compression = lzss]
+                  0000eba7    00000001     --HOLE-- [fill = 0]
+                  0000eba8    00000006     (__TI_handler_table)
+                  0000ebae    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  0000ebb2    00000008     (__TI_cinit_table)
+
+.binit     0    0000c000    00000000     
+
+.init_array 
+*          0    0000c000    00000000     UNINITIALIZED
+
+TRAPINT    0    0000ffe0    00000002     
+                  0000ffe0    00000002     rts430_eabi.lib : int00.asm.obj (.int00)
+
+PORT1      0    0000ffe4    00000002     
+                  0000ffe4    00000002     Comparator.obj (.int02)
+
+PORT2      0    0000ffe6    00000002     
+                  0000ffe6    00000002     main.obj (.int03)
+
+ADC10      0    0000ffea    00000002     
+                  0000ffea    00000002     ADC.obj (.int05)
+
+USCIAB0TX 
+*          0    0000ffec    00000002     
+                  0000ffec    00000002     rts430_eabi.lib : int06.asm.obj (.int06)
+
+USCIAB0RX 
+*          0    0000ffee    00000002     
+                  0000ffee    00000002     rts430_eabi.lib : int07.asm.obj (.int07)
+
+TIMER0_A1 
+*          0    0000fff0    00000002     
+                  0000fff0    00000002     rts430_eabi.lib : int08.asm.obj (.int08)
+
+TIMER0_A0 
+*          0    0000fff2    00000002     
+                  0000fff2    00000002     rts430_eabi.lib : int09.asm.obj (.int09)
+
+WDT        0    0000fff4    00000002     
+                  0000fff4    00000002     rts430_eabi.lib : int10.asm.obj (.int10)
+
+COMPARATORA 
+*          0    0000fff6    00000002     
+                  0000fff6    00000002     rts430_eabi.lib : int11.asm.obj (.int11)
+
+TIMER1_A1 
+*          0    0000fff8    00000002     
+                  0000fff8    00000002     rts430_eabi.lib : int12.asm.obj (.int12)
+
+TIMER1_A0 
+*          0    0000fffa    00000002     
+                  0000fffa    00000002     main.obj (.int13)
+
+NMI        0    0000fffc    00000002     
+                  0000fffc    00000002     rts430_eabi.lib : int14.asm.obj (.int14)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430_eabi.lib : boot.c.obj (.reset)
+
+$fill000   0    0000ffde    00000002     
+                  0000ffde    00000002     --HOLE-- [fill = ffff]
+
+MODULE SUMMARY
+
+       Module                       code    ro data   rw data
+       ------                       ----    -------   -------
+    .\
+       main.obj                     3946    6         106    
+       cc2500.obj                   2244    0         0      
+       Comparator.obj               1220    2         80     
+       ADC.obj                      330     2         4      
+       BlinkPattern.obj             260     0         0      
+       SPI.obj                      204     0         0      
+       DigiPot.obj                  112     0         0      
+       Booster.obj                  26      0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       8342    10        190    
+                                                             
+    C:\ti\ccs910\ccs\tools\compiler\ti-cgt-msp430_18.12.2.LTS\lib\rts430_eabi.lib
+       frcmpyd.c.obj                646     0         0      
+       mpyd.c.obj                   622     0         0      
+       fs_mpy.asm.obj               196     0         0      
+       fltlid.c.obj                 172     0         0      
+       fltuld.c.obj                 138     0         0      
+       copy_decompress_lzss.c.obj   124     0         0      
+       fixdul.c.obj                 116     0         0      
+       lsr32.asm.obj                110     0         0      
+       lsr16.asm.obj                76      0         0      
+       fs_tou.asm.obj               70      0         0      
+       autoinit.c.obj               66      0         0      
+       asr32.asm.obj                62      0         0      
+       lsl32.asm.obj                62      0         0      
+       asr16.asm.obj                44      0         0      
+       lsl16.asm.obj                44      0         0      
+       mult32.asm.obj               38      0         0      
+       fs_utof.asm.obj              36      0         0      
+       boot.c.obj                   28      2         0      
+       copy_zero_init.c.obj         20      0         0      
+       memset.c.obj                 20      0         0      
+       copy_decompress_none.c.obj   18      0         0      
+       fixdu.c.obj                  18      0         0      
+       memcpy.c.obj                 18      0         0      
+       epilog.asm.obj               16      0         0      
+       fltid.c.obj                  12      0         0      
+       isr_trap.asm.obj             8       0         0      
+       exit.c.obj                   6       0         0      
+       fltud.c.obj                  6       0         0      
+       pre_init.c.obj               4       0         0      
+       int00.asm.obj                0       2         0      
+       int06.asm.obj                0       2         0      
+       int07.asm.obj                0       2         0      
+       int08.asm.obj                0       2         0      
+       int09.asm.obj                0       2         0      
+       int10.asm.obj                0       2         0      
+       int11.asm.obj                0       2         0      
+       int12.asm.obj                0       2         0      
+       int14.asm.obj                0       2         0      
+       startup.c.obj                2       0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       2798    20        0      
+                                                             
+       Stack:                       0       0         80     
+       Linker Generated:            0       51        0      
+    +--+----------------------------+-------+---------+---------+
+       Grand Total:                 11140   81        270    
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000ebb2 records: 2, size/record: 4, table size: 8
+	.data: load addr=0000eb86, load size=00000021 bytes, run addr=00000200, run size=00000082 bytes, compression=lzss
+	.bss: load addr=0000ebae, load size=00000004 bytes, run addr=00000282, run size=0000003c bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000eba8 records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+0000004a  ADC10AE0                      
+000001b0  ADC10CTL0                     
+000001b2  ADC10CTL1                     
+00000048  ADC10DTC0                     
+00000049  ADC10DTC1                     
+000001b4  ADC10MEM                      
+000001bc  ADC10SA                       
+0000ea88  ADC10_ISR                     
+00000057  BCSCTL1                       
+00000058  BCSCTL2                       
+00000053  BCSCTL3                       
+0000e9ce  BatteryValue                  
+0000eb72  C$$EXIT                       
+00000059  CACTL1                        
+0000005a  CACTL2                        
+000010fb  CALBC1_12MHZ                  
+000010f9  CALBC1_16MHZ                  
+000010ff  CALBC1_1MHZ                   
+000010fd  CALBC1_8MHZ                   
+000010fa  CALDCO_12MHZ                  
+000010f8  CALDCO_16MHZ                  
+000010fe  CALDCO_1MHZ                   
+000010fc  CALDCO_8MHZ                   
+0000005b  CAPD                          
+0000e9ce  CheckVBattery                 
+0000e5b8  CheckVBoost                   
+0000e75e  CheckVBoostNew                
+0000e1cc  CheckVRef                     
+0000ea34  ComparatorSetup               
+0000eb2c  ContinuousTxnPattern          
+00000056  DCOCTL                        
+0000eb34  DisableGDO0                   
+0000eb3c  DisableHallSensor             
+0000eb04  DisableStimulation            
+0000eb44  EnableGDO0                    
+0000eb4c  EnableHallSensor              
+0000eb12  EnableStimulation             
+00000128  FCTL1                         
+0000012a  FCTL2                         
+0000012c  FCTL3                         
+0000025e  Freq_compare                  
+0000e972  GDO0Setup                     
+0000e992  HallSensorSetup               
+00000000  IE1                           
+00000001  IE2                           
+00000002  IFG1                          
+00000003  IFG2                          
+0000d5ca  ImpChk                        
+00000242  ImpStL                        
+00000243  ImpStR                        
+0000d40e  ImpedanceStatus               
+0000eb54  LEDSetup                      
+0000e72a  LED_FLASH3                    
+00000022  P1DIR                         
+00000025  P1IE                          
+00000024  P1IES                         
+00000023  P1IFG                         
+00000020  P1IN                          
+00000021  P1OUT                         
+00000027  P1REN                         
+00000026  P1SEL                         
+00000041  P1SEL2                        
+0000002a  P2DIR                         
+0000002d  P2IE                          
+0000002c  P2IES                         
+0000002b  P2IFG                         
+00000028  P2IN                          
+00000029  P2OUT                         
+0000002f  P2REN                         
+0000002e  P2SEL                         
+00000042  P2SEL2                        
+0000001a  P3DIR                         
+00000018  P3IN                          
+00000019  P3OUT                         
+00000010  P3REN                         
+0000001b  P3SEL                         
+00000043  P3SEL2                        
+0000e29a  PWM                           
+0000e002  PacketNotReceive              
+0000e352  Port_1                        
+0000e234  Port_2                        
+0000e9e8  RestartBooster                
+0000df8a  SPISetup                      
+0000e3a6  SPI_writeData                 
+0000e0ec  Set_DIGIPOT                   
+0000e498  StartErrorRecognitionPattern  
+0000eb5c  StimulationOffPattern         
+00000172  TA0CCR0                       
+00000174  TA0CCR1                       
+00000176  TA0CCR2                       
+00000162  TA0CCTL0                      
+00000164  TA0CCTL1                      
+00000166  TA0CCTL2                      
+00000160  TA0CTL                        
+0000012e  TA0IV                         
+00000170  TA0R                          
+00000192  TA1CCR0                       
+00000194  TA1CCR1                       
+00000196  TA1CCR2                       
+00000182  TA1CCTL0                      
+00000184  TA1CCTL1                      
+00000186  TA1CCTL2                      
+00000180  TA1CTL                        
+0000011e  TA1IV                         
+00000190  TA1R                          
+000010db  TLV_ADC10_1_LEN               
+000010da  TLV_ADC10_1_TAG               
+000010c0  TLV_CHECKSUM                  
+000010f7  TLV_DCO_30_LEN                
+000010f6  TLV_DCO_30_TAG                
+0000e8e4  Timer1_A0                     
+0000005d  UCA0ABCTL                     
+00000062  UCA0BR0                       
+00000063  UCA0BR1                       
+00000060  UCA0CTL0                      
+00000061  UCA0CTL1                      
+0000005f  UCA0IRRCTL                    
+0000005e  UCA0IRTCTL                    
+00000064  UCA0MCTL                      
+00000066  UCA0RXBUF                     
+00000065  UCA0STAT                      
+00000067  UCA0TXBUF                     
+0000006a  UCB0BR0                       
+0000006b  UCB0BR1                       
+00000068  UCB0CTL0                      
+00000069  UCB0CTL1                      
+0000006c  UCB0I2CIE                     
+00000118  UCB0I2COA                     
+0000011a  UCB0I2CSA                     
+0000006e  UCB0RXBUF                     
+0000006d  UCB0STAT                      
+0000006f  UCB0TXBUF                     
+00000282  VBoostArray                   
+000002a2  VRef_test                     
+000002a4  VRef_test_left                
+000002a6  VRef_test_right               
+00000120  WDTCTL                        
+00000400  __STACK_END                   
+00000050  __STACK_SIZE                  
+0000ebb2  __TI_CINIT_Base               
+0000ebba  __TI_CINIT_Limit              
+0000eba8  __TI_Handler_Table_Base       
+0000ebae  __TI_Handler_Table_Limit      
+0000eb64  __TI_ISR_TRAP                 
+0000e5fc  __TI_auto_init_nobinit_nopinit
+0000df0e  __TI_decompress_lzss          
+0000eaac  __TI_decompress_none          
+0000ca5c  __TI_frcmpyd                  
+0000ffe0  __TI_int00                    
+0000ffe4  __TI_int02                    
+0000ffe6  __TI_int03                    
+0000ffea  __TI_int05                    
+0000ffec  __TI_int06                    
+0000ffee  __TI_int07                    
+0000fff0  __TI_int08                    
+0000fff2  __TI_int09                    
+0000fff4  __TI_int10                    
+0000fff6  __TI_int11                    
+0000fff8  __TI_int12                    
+0000fffa  __TI_int13                    
+0000fffc  __TI_int14                    
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+0000ea60  __TI_zero_init_nomemset       
+ffffffff  __c_args__                    
+0000ea9a  __mspabi_fixdu                
+0000e078  __mspabi_fixdul               
+0000e572  __mspabi_fixfu                
+0000eb20  __mspabi_fltid                
+0000dcb0  __mspabi_fltlid               
+0000eb6c  __mspabi_fltud                
+0000e92c  __mspabi_fltuf                
+0000ddfa  __mspabi_fltuld               
+0000eb00  __mspabi_func_epilog_1        
+0000eafe  __mspabi_func_epilog_2        
+0000eafc  __mspabi_func_epilog_3        
+0000eafa  __mspabi_func_epilog_4        
+0000eaf8  __mspabi_func_epilog_5        
+0000eaf6  __mspabi_func_epilog_6        
+0000eaf4  __mspabi_func_epilog_7        
+0000cf68  __mspabi_mpyd                 
+0000db30  __mspabi_mpyf                 
+0000e8be  __mspabi_mpyl                 
+0000e8be  __mspabi_mpyl_sw              
+0000e840  __mspabi_slli                 
+0000e868  __mspabi_slli_1               
+0000e856  __mspabi_slli_10              
+0000e854  __mspabi_slli_11              
+0000e852  __mspabi_slli_12              
+0000e850  __mspabi_slli_13              
+0000e84e  __mspabi_slli_14              
+0000e84c  __mspabi_slli_15              
+0000e866  __mspabi_slli_2               
+0000e864  __mspabi_slli_3               
+0000e862  __mspabi_slli_4               
+0000e860  __mspabi_slli_5               
+0000e85e  __mspabi_slli_6               
+0000e85c  __mspabi_slli_7               
+0000e85a  __mspabi_slli_8               
+0000e858  __mspabi_slli_9               
+0000e6b4  __mspabi_slll_1               
+0000e690  __mspabi_slll_10              
+0000e68c  __mspabi_slll_11              
+0000e688  __mspabi_slll_12              
+0000e684  __mspabi_slll_13              
+0000e680  __mspabi_slll_14              
+0000e67c  __mspabi_slll_15              
+0000e6b0  __mspabi_slll_2               
+0000e6ac  __mspabi_slll_3               
+0000e6a8  __mspabi_slll_4               
+0000e6a4  __mspabi_slll_5               
+0000e6a0  __mspabi_slll_6               
+0000e69c  __mspabi_slll_7               
+0000e698  __mspabi_slll_8               
+0000e694  __mspabi_slll_9               
+0000e814  __mspabi_srai                 
+0000e83c  __mspabi_srai_1               
+0000e82a  __mspabi_srai_10              
+0000e828  __mspabi_srai_11              
+0000e826  __mspabi_srai_12              
+0000e824  __mspabi_srai_13              
+0000e822  __mspabi_srai_14              
+0000e820  __mspabi_srai_15              
+0000e83a  __mspabi_srai_2               
+0000e838  __mspabi_srai_3               
+0000e836  __mspabi_srai_4               
+0000e834  __mspabi_srai_5               
+0000e832  __mspabi_srai_6               
+0000e830  __mspabi_srai_7               
+0000e82e  __mspabi_srai_8               
+0000e82c  __mspabi_srai_9               
+0000e676  __mspabi_sral_1               
+0000e652  __mspabi_sral_10              
+0000e64e  __mspabi_sral_11              
+0000e64a  __mspabi_sral_12              
+0000e646  __mspabi_sral_13              
+0000e642  __mspabi_sral_14              
+0000e63e  __mspabi_sral_15              
+0000e672  __mspabi_sral_2               
+0000e66e  __mspabi_sral_3               
+0000e66a  __mspabi_sral_4               
+0000e666  __mspabi_sral_5               
+0000e662  __mspabi_sral_6               
+0000e65e  __mspabi_sral_7               
+0000e65a  __mspabi_sral_8               
+0000e656  __mspabi_sral_9               
+0000e44c  __mspabi_srli                 
+0000e492  __mspabi_srli_1               
+0000e46e  __mspabi_srli_10              
+0000e46a  __mspabi_srli_11              
+0000e466  __mspabi_srli_12              
+0000e462  __mspabi_srli_13              
+0000e45e  __mspabi_srli_14              
+0000e45a  __mspabi_srli_15              
+0000e48e  __mspabi_srli_2               
+0000e48a  __mspabi_srli_3               
+0000e486  __mspabi_srli_4               
+0000e482  __mspabi_srli_5               
+0000e47e  __mspabi_srli_6               
+0000e47a  __mspabi_srli_7               
+0000e476  __mspabi_srli_8               
+0000e472  __mspabi_srli_9               
+0000eabe  __mspabi_srll                 
+0000e34a  __mspabi_srll_1               
+0000e314  __mspabi_srll_10              
+0000e30e  __mspabi_srll_11              
+0000e308  __mspabi_srll_12              
+0000e302  __mspabi_srll_13              
+0000e2fc  __mspabi_srll_14              
+0000e2f6  __mspabi_srll_15              
+0000e344  __mspabi_srll_2               
+0000e33e  __mspabi_srll_3               
+0000e338  __mspabi_srll_4               
+0000e332  __mspabi_srll_5               
+0000e32c  __mspabi_srll_6               
+0000e326  __mspabi_srll_7               
+0000e320  __mspabi_srll_8               
+0000e31a  __mspabi_srll_9               
+0000e9b2  _c_int00_noargs               
+0000d964  _compare                      
+0000dd5c  _compare_helper               
+0000e7bc  _helper                       
+0000fffe  _reset_vector                 
+000003b0  _stack                        
+0000eb82  _system_post_cinit            
+0000eb7e  _system_pre_init              
+0000eb72  abort                         
+0000e3fa  awake_cc2500                  
+00000240  batteryLevel                  
+0000e78e  cc2500_SPIReadStatus          
+0000cce2  cc2500_init                   
+0000e4e2  cc2500_nwor_init              
+0000e7e8  cc2500_read_reg               
+0000e15c  cc2500_receive_wor            
+0000e950  cc2500_reset                  
+0000ea02  cc2500_strobe                 
+0000e908  cc2500_strobe1                
+0000d852  cc2500_transmit_arr           
+0000d1d6  cc2500_transmit_arr_new       
+0000e52a  cc2500_wor_init               
+00000246  channel                       
+00000270  cnt                           
+00000272  count                         
+00000274  count1                        
+0000e6ba  count_rtc                     
+00000260  data_new                      
+00000200  dbs_array                     
+0000dbf4  dbs_freq                      
+0000da5e  dbs_pw                        
+0000025a  delay                         
+0000024a  func                          
+00000278  func_iden                     
+00000256  gdo0_change                   
+000002a8  i_left                        
+000002aa  i_new_imp                     
+000002ac  imp                           
+0000e86c  ini_f_pw_variables            
+0000027a  interrupt_variable            
+000002ae  k                             
+0000de84  led_init_match                
+0000e6f4  led_init_nmatch               
+000002b0  loop_count                    
+0000c000  main                          
+0000ead0  memcpy                        
+0000ea74  memset                        
+000002b2  p                             
+0000024c  pack_rec                      
+0000024d  pack_search                   
+00000248  power_mode                    
+0000e896  pwd_mode_cc2500               
+00000257  rtc_hh                        
+00000258  rtc_mm                        
+00000259  rtc_ss                        
+0000d720  sample_dbs                    
+0000ea1c  setupTimer                    
+0000eae2  setupTimer_freq               
+0000023c  stimulationStatus             
+000002b4  stimulation_clk               
+0000023e  stimulation_cnt               
+0000eb78  stopTimer_freq                
+0000ea4a  temp_read                     
+00000250  timer_counter                 
+0000024e  timer_decision                
+000002b6  timer_tar_PW_left             
+000002b8  timer_tar_PW_right            
+00000276  timer_tar_count               
+000002ba  timer_tar_count_left          
+000002bc  timer_tar_count_right         
+00000254  timer_wor_counter             
+00000252  txn_counter                   
+00000244  type                          
+0000027e  vboost_weight                 
+0000027c  vref_testing                  
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  IE1                           
+00000001  IE2                           
+00000002  IFG1                          
+00000003  IFG2                          
+00000010  P3REN                         
+00000018  P3IN                          
+00000019  P3OUT                         
+0000001a  P3DIR                         
+0000001b  P3SEL                         
+00000020  P1IN                          
+00000021  P1OUT                         
+00000022  P1DIR                         
+00000023  P1IFG                         
+00000024  P1IES                         
+00000025  P1IE                          
+00000026  P1SEL                         
+00000027  P1REN                         
+00000028  P2IN                          
+00000029  P2OUT                         
+0000002a  P2DIR                         
+0000002b  P2IFG                         
+0000002c  P2IES                         
+0000002d  P2IE                          
+0000002e  P2SEL                         
+0000002f  P2REN                         
+00000041  P1SEL2                        
+00000042  P2SEL2                        
+00000043  P3SEL2                        
+00000048  ADC10DTC0                     
+00000049  ADC10DTC1                     
+0000004a  ADC10AE0                      
+00000050  __STACK_SIZE                  
+00000053  BCSCTL3                       
+00000056  DCOCTL                        
+00000057  BCSCTL1                       
+00000058  BCSCTL2                       
+00000059  CACTL1                        
+0000005a  CACTL2                        
+0000005b  CAPD                          
+0000005d  UCA0ABCTL                     
+0000005e  UCA0IRTCTL                    
+0000005f  UCA0IRRCTL                    
+00000060  UCA0CTL0                      
+00000061  UCA0CTL1                      
+00000062  UCA0BR0                       
+00000063  UCA0BR1                       
+00000064  UCA0MCTL                      
+00000065  UCA0STAT                      
+00000066  UCA0RXBUF                     
+00000067  UCA0TXBUF                     
+00000068  UCB0CTL0                      
+00000069  UCB0CTL1                      
+0000006a  UCB0BR0                       
+0000006b  UCB0BR1                       
+0000006c  UCB0I2CIE                     
+0000006d  UCB0STAT                      
+0000006e  UCB0RXBUF                     
+0000006f  UCB0TXBUF                     
+00000118  UCB0I2COA                     
+0000011a  UCB0I2CSA                     
+0000011e  TA1IV                         
+00000120  WDTCTL                        
+00000128  FCTL1                         
+0000012a  FCTL2                         
+0000012c  FCTL3                         
+0000012e  TA0IV                         
+00000160  TA0CTL                        
+00000162  TA0CCTL0                      
+00000164  TA0CCTL1                      
+00000166  TA0CCTL2                      
+00000170  TA0R                          
+00000172  TA0CCR0                       
+00000174  TA0CCR1                       
+00000176  TA0CCR2                       
+00000180  TA1CTL                        
+00000182  TA1CCTL0                      
+00000184  TA1CCTL1                      
+00000186  TA1CCTL2                      
+00000190  TA1R                          
+00000192  TA1CCR0                       
+00000194  TA1CCR1                       
+00000196  TA1CCR2                       
+000001b0  ADC10CTL0                     
+000001b2  ADC10CTL1                     
+000001b4  ADC10MEM                      
+000001bc  ADC10SA                       
+00000200  dbs_array                     
+0000023c  stimulationStatus             
+0000023e  stimulation_cnt               
+00000240  batteryLevel                  
+00000242  ImpStL                        
+00000243  ImpStR                        
+00000244  type                          
+00000246  channel                       
+00000248  power_mode                    
+0000024a  func                          
+0000024c  pack_rec                      
+0000024d  pack_search                   
+0000024e  timer_decision                
+00000250  timer_counter                 
+00000252  txn_counter                   
+00000254  timer_wor_counter             
+00000256  gdo0_change                   
+00000257  rtc_hh                        
+00000258  rtc_mm                        
+00000259  rtc_ss                        
+0000025a  delay                         
+0000025e  Freq_compare                  
+00000260  data_new                      
+00000270  cnt                           
+00000272  count                         
+00000274  count1                        
+00000276  timer_tar_count               
+00000278  func_iden                     
+0000027a  interrupt_variable            
+0000027c  vref_testing                  
+0000027e  vboost_weight                 
+00000282  VBoostArray                   
+000002a2  VRef_test                     
+000002a4  VRef_test_left                
+000002a6  VRef_test_right               
+000002a8  i_left                        
+000002aa  i_new_imp                     
+000002ac  imp                           
+000002ae  k                             
+000002b0  loop_count                    
+000002b2  p                             
+000002b4  stimulation_clk               
+000002b6  timer_tar_PW_left             
+000002b8  timer_tar_PW_right            
+000002ba  timer_tar_count_left          
+000002bc  timer_tar_count_right         
+000003b0  _stack                        
+00000400  __STACK_END                   
+000010c0  TLV_CHECKSUM                  
+000010da  TLV_ADC10_1_TAG               
+000010db  TLV_ADC10_1_LEN               
+000010f6  TLV_DCO_30_TAG                
+000010f7  TLV_DCO_30_LEN                
+000010f8  CALDCO_16MHZ                  
+000010f9  CALBC1_16MHZ                  
+000010fa  CALDCO_12MHZ                  
+000010fb  CALBC1_12MHZ                  
+000010fc  CALDCO_8MHZ                   
+000010fd  CALBC1_8MHZ                   
+000010fe  CALDCO_1MHZ                   
+000010ff  CALBC1_1MHZ                   
+0000c000  main                          
+0000ca5c  __TI_frcmpyd                  
+0000cce2  cc2500_init                   
+0000cf68  __mspabi_mpyd                 
+0000d1d6  cc2500_transmit_arr_new       
+0000d40e  ImpedanceStatus               
+0000d5ca  ImpChk                        
+0000d720  sample_dbs                    
+0000d852  cc2500_transmit_arr           
+0000d964  _compare                      
+0000da5e  dbs_pw                        
+0000db30  __mspabi_mpyf                 
+0000dbf4  dbs_freq                      
+0000dcb0  __mspabi_fltlid               
+0000dd5c  _compare_helper               
+0000ddfa  __mspabi_fltuld               
+0000de84  led_init_match                
+0000df0e  __TI_decompress_lzss          
+0000df8a  SPISetup                      
+0000e002  PacketNotReceive              
+0000e078  __mspabi_fixdul               
+0000e0ec  Set_DIGIPOT                   
+0000e15c  cc2500_receive_wor            
+0000e1cc  CheckVRef                     
+0000e234  Port_2                        
+0000e29a  PWM                           
+0000e2f6  __mspabi_srll_15              
+0000e2fc  __mspabi_srll_14              
+0000e302  __mspabi_srll_13              
+0000e308  __mspabi_srll_12              
+0000e30e  __mspabi_srll_11              
+0000e314  __mspabi_srll_10              
+0000e31a  __mspabi_srll_9               
+0000e320  __mspabi_srll_8               
+0000e326  __mspabi_srll_7               
+0000e32c  __mspabi_srll_6               
+0000e332  __mspabi_srll_5               
+0000e338  __mspabi_srll_4               
+0000e33e  __mspabi_srll_3               
+0000e344  __mspabi_srll_2               
+0000e34a  __mspabi_srll_1               
+0000e352  Port_1                        
+0000e3a6  SPI_writeData                 
+0000e3fa  awake_cc2500                  
+0000e44c  __mspabi_srli                 
+0000e45a  __mspabi_srli_15              
+0000e45e  __mspabi_srli_14              
+0000e462  __mspabi_srli_13              
+0000e466  __mspabi_srli_12              
+0000e46a  __mspabi_srli_11              
+0000e46e  __mspabi_srli_10              
+0000e472  __mspabi_srli_9               
+0000e476  __mspabi_srli_8               
+0000e47a  __mspabi_srli_7               
+0000e47e  __mspabi_srli_6               
+0000e482  __mspabi_srli_5               
+0000e486  __mspabi_srli_4               
+0000e48a  __mspabi_srli_3               
+0000e48e  __mspabi_srli_2               
+0000e492  __mspabi_srli_1               
+0000e498  StartErrorRecognitionPattern  
+0000e4e2  cc2500_nwor_init              
+0000e52a  cc2500_wor_init               
+0000e572  __mspabi_fixfu                
+0000e5b8  CheckVBoost                   
+0000e5fc  __TI_auto_init_nobinit_nopinit
+0000e63e  __mspabi_sral_15              
+0000e642  __mspabi_sral_14              
+0000e646  __mspabi_sral_13              
+0000e64a  __mspabi_sral_12              
+0000e64e  __mspabi_sral_11              
+0000e652  __mspabi_sral_10              
+0000e656  __mspabi_sral_9               
+0000e65a  __mspabi_sral_8               
+0000e65e  __mspabi_sral_7               
+0000e662  __mspabi_sral_6               
+0000e666  __mspabi_sral_5               
+0000e66a  __mspabi_sral_4               
+0000e66e  __mspabi_sral_3               
+0000e672  __mspabi_sral_2               
+0000e676  __mspabi_sral_1               
+0000e67c  __mspabi_slll_15              
+0000e680  __mspabi_slll_14              
+0000e684  __mspabi_slll_13              
+0000e688  __mspabi_slll_12              
+0000e68c  __mspabi_slll_11              
+0000e690  __mspabi_slll_10              
+0000e694  __mspabi_slll_9               
+0000e698  __mspabi_slll_8               
+0000e69c  __mspabi_slll_7               
+0000e6a0  __mspabi_slll_6               
+0000e6a4  __mspabi_slll_5               
+0000e6a8  __mspabi_slll_4               
+0000e6ac  __mspabi_slll_3               
+0000e6b0  __mspabi_slll_2               
+0000e6b4  __mspabi_slll_1               
+0000e6ba  count_rtc                     
+0000e6f4  led_init_nmatch               
+0000e72a  LED_FLASH3                    
+0000e75e  CheckVBoostNew                
+0000e78e  cc2500_SPIReadStatus          
+0000e7bc  _helper                       
+0000e7e8  cc2500_read_reg               
+0000e814  __mspabi_srai                 
+0000e820  __mspabi_srai_15              
+0000e822  __mspabi_srai_14              
+0000e824  __mspabi_srai_13              
+0000e826  __mspabi_srai_12              
+0000e828  __mspabi_srai_11              
+0000e82a  __mspabi_srai_10              
+0000e82c  __mspabi_srai_9               
+0000e82e  __mspabi_srai_8               
+0000e830  __mspabi_srai_7               
+0000e832  __mspabi_srai_6               
+0000e834  __mspabi_srai_5               
+0000e836  __mspabi_srai_4               
+0000e838  __mspabi_srai_3               
+0000e83a  __mspabi_srai_2               
+0000e83c  __mspabi_srai_1               
+0000e840  __mspabi_slli                 
+0000e84c  __mspabi_slli_15              
+0000e84e  __mspabi_slli_14              
+0000e850  __mspabi_slli_13              
+0000e852  __mspabi_slli_12              
+0000e854  __mspabi_slli_11              
+0000e856  __mspabi_slli_10              
+0000e858  __mspabi_slli_9               
+0000e85a  __mspabi_slli_8               
+0000e85c  __mspabi_slli_7               
+0000e85e  __mspabi_slli_6               
+0000e860  __mspabi_slli_5               
+0000e862  __mspabi_slli_4               
+0000e864  __mspabi_slli_3               
+0000e866  __mspabi_slli_2               
+0000e868  __mspabi_slli_1               
+0000e86c  ini_f_pw_variables            
+0000e896  pwd_mode_cc2500               
+0000e8be  __mspabi_mpyl                 
+0000e8be  __mspabi_mpyl_sw              
+0000e8e4  Timer1_A0                     
+0000e908  cc2500_strobe1                
+0000e92c  __mspabi_fltuf                
+0000e950  cc2500_reset                  
+0000e972  GDO0Setup                     
+0000e992  HallSensorSetup               
+0000e9b2  _c_int00_noargs               
+0000e9ce  BatteryValue                  
+0000e9ce  CheckVBattery                 
+0000e9e8  RestartBooster                
+0000ea02  cc2500_strobe                 
+0000ea1c  setupTimer                    
+0000ea34  ComparatorSetup               
+0000ea4a  temp_read                     
+0000ea60  __TI_zero_init_nomemset       
+0000ea74  memset                        
+0000ea88  ADC10_ISR                     
+0000ea9a  __mspabi_fixdu                
+0000eaac  __TI_decompress_none          
+0000eabe  __mspabi_srll                 
+0000ead0  memcpy                        
+0000eae2  setupTimer_freq               
+0000eaf4  __mspabi_func_epilog_7        
+0000eaf6  __mspabi_func_epilog_6        
+0000eaf8  __mspabi_func_epilog_5        
+0000eafa  __mspabi_func_epilog_4        
+0000eafc  __mspabi_func_epilog_3        
+0000eafe  __mspabi_func_epilog_2        
+0000eb00  __mspabi_func_epilog_1        
+0000eb04  DisableStimulation            
+0000eb12  EnableStimulation             
+0000eb20  __mspabi_fltid                
+0000eb2c  ContinuousTxnPattern          
+0000eb34  DisableGDO0                   
+0000eb3c  DisableHallSensor             
+0000eb44  EnableGDO0                    
+0000eb4c  EnableHallSensor              
+0000eb54  LEDSetup                      
+0000eb5c  StimulationOffPattern         
+0000eb64  __TI_ISR_TRAP                 
+0000eb6c  __mspabi_fltud                
+0000eb72  C$$EXIT                       
+0000eb72  abort                         
+0000eb78  stopTimer_freq                
+0000eb7e  _system_pre_init              
+0000eb82  _system_post_cinit            
+0000eba8  __TI_Handler_Table_Base       
+0000ebae  __TI_Handler_Table_Limit      
+0000ebb2  __TI_CINIT_Base               
+0000ebba  __TI_CINIT_Limit              
+0000ffe0  __TI_int00                    
+0000ffe4  __TI_int02                    
+0000ffe6  __TI_int03                    
+0000ffea  __TI_int05                    
+0000ffec  __TI_int06                    
+0000ffee  __TI_int07                    
+0000fff0  __TI_int08                    
+0000fff2  __TI_int09                    
+0000fff4  __TI_int10                    
+0000fff6  __TI_int11                    
+0000fff8  __TI_int12                    
+0000fffa  __TI_int13                    
+0000fffc  __TI_int14                    
+0000fffe  _reset_vector                 
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __c_args__                    
+
+[354 symbols]
