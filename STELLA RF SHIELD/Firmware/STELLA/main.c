@@ -1,5 +1,7 @@
 /******************************************
- * STELLA RF  by Franz Plocksties / Obaid Ullah Shah
+ * STELLA RF
+ * Thanks to Obaid Ullah Shah for his main contribution to the firmware.
+ * Supervision: Franz Plocksties / Dirk Timmermann
  ********************************************/
 
 #include <msp430g2553.h>
@@ -17,7 +19,6 @@
 #include "Comparator.h"
 #include "BlinkPattern.h"
 #include "cc2500.h"
-//#include "DBS_freq.h"
 
 
 volatile Stimulation_Status stimulationStatus = STIMULATION_OFF;
@@ -82,7 +83,6 @@ void EnableStimulation() {
     stimulationStatus = STIMULATION_ON;
     P1OUT &= ~BIT2;              // Enable the current source
     P1SEL |= BIT2;
-    //stimulation_cnt = 0;
 
 }
 
@@ -91,8 +91,7 @@ void DisableStimulation() {
     stimulationStatus = STIMULATION_OFF;
     P1OUT |= BIT2;              // Disable the current source
     P1SEL &= ~BIT2;
-    //StimulationOffPattern();
-    //_BIS_SR(LPM4_bits + GIE);
+
 }
 
 
@@ -209,35 +208,33 @@ uint8_t ImpedanceStatus(int *VBoostArray, Stimulation_Channel channel, Stimulati
     uint8_t status;
 
 
-    //unsigned int VBoost = CheckVBoost();
     int i;
     int i_right;
     Set_DIGIPOT(VBOOSTER,240); //default value Set_DIGIPOT(VBOOSTER,240);
-    __delay_cycles(40000); // for testing Obaid 09.11
+    __delay_cycles(40000);
 
 
     if(type == UNILATERAL) {
 
         i = _compare(channel, VBoostArray, Freq_compare, pack_rec);
-        //dbs_freq(channel); // for freq of DBS signal
         __delay_cycles(100);
 
         if (i >= 0 && i < 16) {
             Set_DIGIPOT(VBOOSTER,i*16);
             i_new_imp = i*16;
-            __delay_cycles(50000);  // for testing Obaid 10.11
+            __delay_cycles(50000);
             return status = 0x00;
                 }
         else if (i == -1)  {
              Set_DIGIPOT(VBOOSTER,0);
              i_new_imp = 0;
-             __delay_cycles(50000);  // for testing Obaid 10.11
+             __delay_cycles(50000);
             return status = 0x01;
                 }
         else if (i == 16)  {
             Set_DIGIPOT(VBOOSTER,240);
             i_new_imp = 240;
-            __delay_cycles(50000); // for testing Obaid 23.11
+            __delay_cycles(50000);
             return status = 0x02;
                 }
     }
@@ -248,7 +245,6 @@ uint8_t ImpedanceStatus(int *VBoostArray, Stimulation_Channel channel, Stimulati
         if(channel == LATERAL_LEFT)  {
 
             i_left = _compare(channel, VBoostArray, Freq_compare, pack_rec);
-            //dbs_freq(channel); // for freq of DBS signal
 
             if (i_left >= 0 && i_left < 16) return status = 0x00;
             else if (i_left == -1) return status = 0x01;
@@ -258,7 +254,6 @@ uint8_t ImpedanceStatus(int *VBoostArray, Stimulation_Channel channel, Stimulati
         if(channel == LATERAL_RIGHT)  {
 
             i_right = _compare(channel, VBoostArray, Freq_compare, pack_rec);
-            //dbs_freq(channel); // for freq of DBS signal
 
             if(i_left == 16 || i_right == 16){
                 Set_DIGIPOT(VBOOSTER,240);
@@ -297,13 +292,9 @@ uint8_t  *ImpChk(Stimulation_Type type, Stimulation_Channel channel, uint16_t Fr
         imps[0] = ImpedanceStatus(VBoostArray, LATERAL_LEFT, BILATERAL, Freq_compare, pack_rec);
         VRef_test_left = VRef_test; //vref_return();
         if(imps[0]==0){
-            //VRef_test_left = VRef_test; //vref_return();
             timer_tar_count_left = dbs_freq(channel, Freq_compare); // for freq of DBS signal
             timer_tar_PW_left = dbs_pw(channel, Freq_compare); // for PW of DBS signal
-            //sample_dbs(channel, VRef_test, Freq_compare); //just for testing
         }
-        //timer_tar_count_left = dbs_freq(channel); // for freq of DBS signal
-        //timer_tar_PW_left = dbs_pw(channel); // for PW of DBS signal
         imps[1] = ImpedanceStatus(VBoostArray, LATERAL_RIGHT, BILATERAL, Freq_compare, pack_rec);
         VRef_test_right = VRef_test; //vref_return();
         if(imps[1]==0){
@@ -438,14 +429,12 @@ int main(void)  {
     cc2500_reset();
     cc2500_init();
     GDO0Setup();
-    //cc2500_wor_init(); //16.04.21 comment out
-    cc2500_nwor_init(); //Added 16.04.21
+    cc2500_nwor_init();
     pwd_mode_cc2500();
     DisableGDO0(); //very important to disable GDO0 for low current consumption
     //------------------------
-    //    int VBoostArray[16];
         unsigned int VBoostCnt;
-        int VBoostStep = 0; // initializa on 05112020 by Obaid
+        int VBoostStep = 0; //
 
        for(VBoostCnt = 0; VBoostCnt < 16; VBoostCnt++) {
 
@@ -476,8 +465,6 @@ int main(void)  {
         __bis_SR_register(LPM3_bits + GIE);       // Enter LPM3 w/ interrupt
         if(timer_counter >= txn_counter || timer_decision == 1){
             if(timer_counter >= txn_counter){
-//                TA1CTL = MC_0; // testing only stop timer
-                //DisableHallSensor(); //for testing on 01.03.2021 problem in swiping magnet after setting parameters
                 timer_counter = 0;
                 pack_rec = 0x00;
                 //write transmit code
@@ -487,8 +474,7 @@ int main(void)  {
                 DisableHallSensor(); //for testing on 11.03.2021 problem in swiping magnet after setting parameters
                 UCB0CTL0 |= UCCKPH;
                 UCB0CTL1 &= ~UCSWRST; //added for testing
-                //cc2500_nwor_init(); //16.04.21 comment out
-                __delay_cycles(10000); //just for testing 23.11
+                __delay_cycles(10000);
                 DisableGDO0();  // Disable GDO interrupt while Transmitting data
                 SPI_writeData(CC2500, REG_CHANNR,   0x00);
                 pwd_mode_cc2500(); //PWD (O) 110321
@@ -522,10 +508,8 @@ int main(void)  {
                     cc2500_transmit_arr(13,t_pac);
                     SPI_writeData(CC2500, REG_CHANNR,   VAL_CHANNR);
                     EnableGDO0(); // Enable GDO interrupt after transmission
-                    //cc2500_wor_init(); //16.04.21 comment out
                 }
                 else if(stimulationStatus == STIMULATION_ON){
-                    //EnableStimulation();
                     FREQ = data_new[1]<<8 | data_new[0];      // Getting Frequency Values
                     PW =  data_new[3]<<8| data_new[2];        //Getting PWM ON-time Value
                     Freq_compare = FREQ; // using for delay function. At moment in testing phase
@@ -537,7 +521,6 @@ int main(void)  {
                     Set_DIGIPOT(COUNTERPULSE_ATTENUATION_RIGHT, data_new[9]); // charge balancing resistance
                     Set_DIGIPOT(CURRENT_LEFT, data_new[10]);
                     Set_DIGIPOT(CURRENT_RIGHT, data_new[10]);
-                    //__delay_cycles(10000); // for testing 23.11
                     PWM(FREQ, PW,(Power_Mode)Mode);
                     EnableStimulation();
                     __delay_cycles(10000); // for testing 23.11
@@ -564,7 +547,6 @@ int main(void)  {
                     __delay_cycles(40000); // just for testing
                     awake_cc2500(); //110321
                     __delay_cycles(4000); // just for testing
-                    //t_pac[8] = 0x00;  // RSSI Obaid
                     t_pac[8] = VRef_test_left;
                     t_pac[9] = VRef_test_right;
                     t_pac[10] = Implant_ID;
@@ -575,7 +557,6 @@ int main(void)  {
                     cc2500_transmit_arr(13,t_pac);
                     SPI_writeData(CC2500, REG_CHANNR,   VAL_CHANNR);
                     EnableGDO0(); // Enable GDO interrupt after transmission
-                    //cc2500_wor_init(); //16.04.21 comment out
                     Set_DIGIPOT(VBOOSTER, i_new_imp); //to adjust VBooster to proper value
                     __delay_cycles(300000);
                 }
@@ -694,14 +675,11 @@ int main(void)  {
                         t_pac_new[32] = dbs_array[10];
                         t_pac_new[33] = dbs_array[11];
                         cc2500_transmit_arr_new(34,t_pac_new);
-                        //cc2500_transmit_arr(12,t_pac);
                         SPI_writeData(CC2500, REG_CHANNR,   VAL_CHANNR);
 
                         EnableGDO0(); // Enable GDO interrupt after transmission
-                        //cc2500_wor_init(); //16.04.21 comment out
                     }
                     else if(stimulationStatus == STIMULATION_ON){
-                        //EnableStimulation();
                         FREQ = data_new[1]<<8 | data_new[0];      // Getting Frequency Values
                         Freq_compare = FREQ; // using for delay function. At moment in testing phase
                         PW =  data_new[3]<<8| data_new[2];        //Getting PWM ON-time Value
@@ -713,7 +691,6 @@ int main(void)  {
                         Set_DIGIPOT(COUNTERPULSE_ATTENUATION_RIGHT, data_new[9]); // charge balancing resistance
                         Set_DIGIPOT(CURRENT_LEFT, data_new[10]);
                         Set_DIGIPOT(CURRENT_RIGHT, data_new[10]);
-                        //__delay_cycles(10000); // for testing 23.11
                         PWM(FREQ, PW,(Power_Mode)Mode);
                         EnableStimulation();
                         __delay_cycles(10000); // for testing 23.11
@@ -769,7 +746,6 @@ int main(void)  {
                         cc2500_transmit_arr_new(34,t_pac_new);
                         SPI_writeData(CC2500, REG_CHANNR,   VAL_CHANNR);
                         EnableGDO0(); // Enable GDO interrupt after transmission
-                        //cc2500_wor_init(); //16.04.21 comment out
                         Set_DIGIPOT(VBOOSTER, i_new_imp); //to adjust VBooster to proper value
                         __delay_cycles(300000);
                         dbs_array[0] = 0;
