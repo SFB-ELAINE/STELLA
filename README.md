@@ -1,6 +1,29 @@
 # The SofTware dEfined impLantabLe modular plAtform (STELLA) for preclinical deep brain stimulation
 
+We aimed to develop an innovative neurostimulator that significantly increases both animal welfare and the scientific value of DBS studies. 
+
+Further details can be found at:
+
+Franz Plocksties, Maria Kober, Christoph Niemann, Jakob Heller, Mareike Fauser, Martin Nüssel, Felix Uster, Denise Franz, Monique Zwar, Anika Lüttig, Justin Kröger, Jörg Harloff, Axel Schulz, Angelika Richter, Rüdiger Köhling, Dirk Timmermann, Alexander Storch:
+The software defined implantable modular platform (STELLA) for preclinical deep brain stimulation research in rodents
+In Journal of Neural Engineering, Vol. 18, Iss. 5, ISSN: 1741-2560, pp. 1-20, DOI: 10.1088/1741-2552/ac23e1, September 2021
+
+[STELLA MAIN PCB](STELLA/tree/main/STELLA PCB)
+
+To link STELLA to the outside world, we have developed an energy-efficient RF Shield that operates in the ISM band. This shield can be piggybacked by STELLA achieving a compact implant. 
+
+Further details can be found at:
+
+Franz Plocksties, Obaid Ullah Shah, Felix Uster, Munawar Ali, Maximilian Koschay, Maria Kober, Alexander Storch, Dirk Timmermann:
+Energy-efficient modular RF interface for fully implantable electrical devices in small rodents
+In Proceedings of the IEEE Biomedical Circuits and Systems Conference (BioCAS), pp. 1-6, DOI:10.1109/BioCAS49922.2021.9645022, Berlin, Deutschland, Oktober 2021
+
+[STELLA RF SHIELD](STELLA/tree/main/STELLA RF SHIELD)
+
+
 ## Comparison of existing neurostimulators with STELLA
+
+https://iopscience.iop.org/article/10.1088/1741-2552/ac23e1
 
 
 |                             | Ewing (2013) [56] | Kouzani (2017) [27] | Kölbl (2016) [26] | Fluri (2017) [24] | Pinnell (2018) [29] | Adams (2019) [21] | Harnack (2008) [32] | Fleischer (2020) [57] | de Haas (2012) [31] | Hentall (2013) [33] | Millard (2007) [34]                          | Forni (2012) [25] | Alpaugh (2019) [30] | Liu (2017) [28] | Arfin (2009) [22] | STELLA                                         |
@@ -36,3 +59,8 @@ Including §battery, {housing, ¶both <br />
 □ Highly flexible regarding needed stimulation time and rodent’s size and weight <br />
 ♣Battery voltage / ♠load impedance out of range indication <br />
 ◆ Extendable by inter-module communication <br />
+
+
+## License
+
+This project is licensed under the terms of GNU General Public License v3.0
