@@ -1,29 +1,31 @@
 # The SofTware dEfined impLantabLe modular plAtform (STELLA) for preclinical deep brain stimulation
 
+## Main Stimulation Platform
+
 We aimed to develop an innovative neurostimulator that significantly increases both animal welfare and the scientific value of DBS studies. 
 
 Further details can be found at:
 
 Franz Plocksties, Maria Kober, Christoph Niemann, Jakob Heller, Mareike Fauser, Martin Nüssel, Felix Uster, Denise Franz, Monique Zwar, Anika Lüttig, Justin Kröger, Jörg Harloff, Axel Schulz, Angelika Richter, Rüdiger Köhling, Dirk Timmermann, Alexander Storch:
 The software defined implantable modular platform (STELLA) for preclinical deep brain stimulation research in rodents
-In Journal of Neural Engineering, Vol. 18, Iss. 5, ISSN: 1741-2560, pp. 1-20, DOI: 10.1088/1741-2552/ac23e1, September 2021
+In Journal of Neural Engineering, Vol. 18, Iss. 5, ISSN: 1741-2560, pp. 1-20, DOI: 10.1088/1741-2552/ac23e1, September 2021. https://iopscience.iop.org/article/10.1088/1741-2552/ac23e1
 
-[STELLA MAIN PCB](https://github.com/SFB-ELAINE/STELLA/tree/main/STELLA%20PCB)
+Hardware, software, and additional materials are available from here: [STELLA MAIN PCB](https://github.com/SFB-ELAINE/STELLA/tree/main/STELLA%20PCB)
 
-To link STELLA to the outside world, we have developed an energy-efficient RF Shield that operates in the ISM band. This shield can be piggybacked by STELLA achieving a compact implant. 
+## RF Shield
+
+To link STELLA to the outside world, we have developed an energy-efficient RF Shield that operates in the ISM band. This shield can be piggybacked by STELLA, achieving a compact implant. 
 
 Further details can be found at:
 
 Franz Plocksties, Obaid Ullah Shah, Felix Uster, Munawar Ali, Maximilian Koschay, Maria Kober, Alexander Storch, Dirk Timmermann:
 Energy-efficient modular RF interface for fully implantable electrical devices in small rodents
-In Proceedings of the IEEE Biomedical Circuits and Systems Conference (BioCAS), pp. 1-6, DOI:10.1109/BioCAS49922.2021.9645022, Berlin, Deutschland, Oktober 2021
+In Proceedings of the IEEE Biomedical Circuits and Systems Conference (BioCAS), pp. 1-6, DOI:10.1109/BioCAS49922.2021.9645022, Berlin, Deutschland, Oktober 2021. https://ieeexplore.ieee.org/document/9645022
 
-[STELLA RF SHIELD](https://github.com/SFB-ELAINE/STELLA/tree/main/STELLA%20RF%20SHIELD)
+Hardware, software, and additional materials are available from here: [STELLA RF SHIELD](https://github.com/SFB-ELAINE/STELLA/tree/main/STELLA%20RF%20SHIELD)
 
 
 ## Comparison of existing neurostimulators with STELLA
-
-https://iopscience.iop.org/article/10.1088/1741-2552/ac23e1
 
 
 |                             | Ewing (2013) [56] | Kouzani (2017) [27] | Kölbl (2016) [26] | Fluri (2017) [24] | Pinnell (2018) [29] | Adams (2019) [21] | Harnack (2008) [32] | Fleischer (2020) [57] | de Haas (2012) [31] | Hentall (2013) [33] | Millard (2007) [34]                          | Forni (2012) [25] | Alpaugh (2019) [30] | Liu (2017) [28] | Arfin (2009) [22] | STELLA                                         |
@@ -41,7 +43,7 @@ https://iopscience.iop.org/article/10.1088/1741-2552/ac23e1
 | PCB weight (g)              | n/a               | 0.92                | n/a               | n/a               | 0.8                 | Feb 18            | n/a                 | n/a                   | n/a                 | n/a                 | n/a                                          | n/a               | n/a                 | n/a             | n/a               | 0.6                                            |
 | Total stimulator weight (g) | 11.5¶             | 4.75§               | 13.8¶             | 2.5§              | 2.8¶                | 5§                | 13¶                 | 2.8§                  | 2.1¶                | 2¶                  | 2.5{                                         | 5.6{/7.4¶         | 4.7¶                | 6§/16¶          | 1.3§              | 2.6 (CR1216),                    4 (CR1225)¶ □ |
 | Battery volume (mm3)        | 3052              | 1000                | 3x550             | 2x70              | 300                 | 1000              | 2x260               | 2x70                  | 3x30                | 2x160               | -                                            | 2x250             | 2x260               | 1000            | 2x50              | 200 (CR1216),300 (CR1225) □                    |
-| PCB size (mm)               | n/a               | 15x18x3*            | 26x12x3*          | n/a               | Ø12.5x5             | 30x25x3*          | 35x17.1x3*          | 10x10-1               | 25x8x3*             | n/a                 | n/a                                          | 28x9x3*           | n/a                 | Ø20x4           | 13x13x3*          | Ø13x3.3                                        |
+| PCB size (mm)               | n/a               | 15x18x3*            | 26x12x3*          | n/a               | Ø12.5x5             | 30x25x3*          | 35x17.1x3*          | 10x10x1               | 25x8x3*             | n/a                 | n/a                                          | 28x9x3*           | n/a                 | Ø20x4           | 13x13x3*          | Ø13x3.3                                        |
 | PCB volume (mm3)            | 2228              | 810                 | 936               | 1477              | 613                 | 2250              | 1796                | 130                   | 600                 | 688                 | n/a                                          | 756               | n/a                 | 1256            | 507               | 438                                            |
 | PCB + battery volume (mm3)  | 5280              | 1810                | 2586              | 1617              | 913                 | 3250              | 2316                | 270                   | 690                 | 1008                | -                                            | 1256              | n/a                 | 2256            | 607               | 638 (CR1216),               738 (CR1225) □     |
 | Total stimulator size (mm)  | 33x20x8¶          | 15x18x10*§          | 30x20x24*¶        | 21x11x7§          | Ø19.2x12.4¶         | 32.5x28x8§        | 38.5x20x13.5¶       | n/a                   | Ø8x30¶              | 18x8x7¶             | 14x12x6{                                     | 15x28x7¶          | n/a                 | Ø20x8¶          | n/a               | Ø15.5×7.5 (CR1216), Ø17.0×9.0 (CR1225)¶ □      |
