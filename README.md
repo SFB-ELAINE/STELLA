@@ -8,7 +8,7 @@ Franz Plocksties, Maria Kober, Christoph Niemann, Jakob Heller, Mareike Fauser, 
 The software defined implantable modular platform (STELLA) for preclinical deep brain stimulation research in rodents
 In Journal of Neural Engineering, Vol. 18, Iss. 5, ISSN: 1741-2560, pp. 1-20, DOI: 10.1088/1741-2552/ac23e1, September 2021
 
-[STELLA MAIN PCB](STELLA/tree/main/STELLA PCB)
+[STELLA MAIN PCB](https://github.com/SFB-ELAINE/STELLA/tree/main/STELLA%20PCB)
 
 To link STELLA to the outside world, we have developed an energy-efficient RF Shield that operates in the ISM band. This shield can be piggybacked by STELLA achieving a compact implant. 
 
@@ -18,7 +18,7 @@ Franz Plocksties, Obaid Ullah Shah, Felix Uster, Munawar Ali, Maximilian Koschay
 Energy-efficient modular RF interface for fully implantable electrical devices in small rodents
 In Proceedings of the IEEE Biomedical Circuits and Systems Conference (BioCAS), pp. 1-6, DOI:10.1109/BioCAS49922.2021.9645022, Berlin, Deutschland, Oktober 2021
 
-[STELLA RF SHIELD](STELLA/tree/main/STELLA RF SHIELD)
+[STELLA RF SHIELD](https://github.com/SFB-ELAINE/STELLA/tree/main/STELLA%20RF%20SHIELD)
 
 
 ## Comparison of existing neurostimulators with STELLA
