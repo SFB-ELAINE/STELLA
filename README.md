@@ -1,8 +1,10 @@
 # The SofTware dEfined impLantabLe modular plAtform (STELLA) for preclinical deep brain stimulation
 
-## Main Stimulation Platform
+## Stimulation Platform
 
 We aimed to develop an innovative neurostimulator that significantly increases both animal welfare and the scientific value of DBS studies. 
+
+![alt text](https://github.com/SFB-ELAINE/STELLA/blob/main/STELLA%20PCB/docs/Main_PCB.png)
 
 Further details can be found at:
 
@@ -15,6 +17,8 @@ Hardware, software, and additional materials are available from here: [STELLA MA
 ## RF Shield
 
 To link STELLA to the outside world, we have developed an energy-efficient RF Shield that operates in the ISM band. This shield can be piggybacked by STELLA, achieving a compact implant. 
+
+![alt text](https://github.com/SFB-ELAINE/STELLA/blob/main/STELLA%20RF%20SHIELD/docs/RF_PCB.png)
 
 Further details can be found at:
 
