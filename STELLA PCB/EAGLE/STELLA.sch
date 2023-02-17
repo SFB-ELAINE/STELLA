@@ -13007,20 +13007,20 @@ DIN A4, landscape with extra doc field</description>
 <part name="R7" library="UKN_rcl" deviceset="R-EU_" device="R0402" value="560/1%"/>
 <part name="R5" library="UKN_rcl" deviceset="R-EU_" device="R0402" value="10k/1%"/>
 <part name="R6" library="UKN_rcl" deviceset="R-EU_" device="R0402" value="10k/1%"/>
-<part name="C5" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF"/>
-<part name="C2" library="UKN_rcl" deviceset="C-EU" device="C0402" value="4.7uF"/>
-<part name="C7" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF"/>
+<part name="C5" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF/6.3VDC"/>
+<part name="C2" library="UKN_rcl" deviceset="C-EU" device="C0402" value="4.7uF/6.3VDC"/>
+<part name="C7" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF/6.3VDC"/>
 <part name="X5" library="MyVia" deviceset="5PIN" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="LED1" library="eZ430-RF2500T_HW-V1.0_20070403" deviceset="LED_LED" device="CHIP-LED0603" value="KPT1608LVSECK-J3-PRV"/>
-<part name="C6A" library="eZ430-RF2500T_HW-V1.0_20070403" deviceset="RCL_C-EU" device="C0805" value="100uF"/>
-<part name="C6" library="eZ430-RF2500T_HW-V1.0_20070403" deviceset="RCL_C-EU" device="C0805" value="100uF"/>
+<part name="C6A" library="eZ430-RF2500T_HW-V1.0_20070403" deviceset="RCL_C-EU" device="C0805" value="100uF/6.3VDC"/>
+<part name="C6" library="eZ430-RF2500T_HW-V1.0_20070403" deviceset="RCL_C-EU" device="C0805" value="100uF/6.3VDC"/>
 <part name="U1" library="PSSI2021SAY" deviceset="PSSI2021SAY" device=""/>
 <part name="P+14" library="supply1" deviceset="VCC" device=""/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
 <part name="R3" library="UKN_rcl" deviceset="R-EU_" device="R0402" value="1k/1%"/>
-<part name="C1" library="UKN_rcl" deviceset="C-EU" device="C0402" value="4.7uF"/>
+<part name="C1" library="UKN_rcl" deviceset="C-EU" device="C0402" value="4.7uF/6.3VDC"/>
 <part name="GND27" library="supply1" deviceset="GND" device=""/>
 <part name="P+18" library="supply1" deviceset="VCC" device=""/>
 <part name="U3" library="stella2.1_bilateral_MainPCB1" deviceset="TLV_9002S_TLV9002S_RUG" device=""/>
@@ -13053,11 +13053,11 @@ DIN A4, landscape with extra doc field</description>
 <part name="P+15" library="supply1" deviceset="VCC" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="C3" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF"/>
+<part name="C3" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF/6.3VDC"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
-<part name="C8" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF"/>
+<part name="C8" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF/6.3VDC"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
-<part name="C10" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF"/>
+<part name="C10" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF/6.3VDC"/>
 <part name="U$1" library="UKN_schematic-port" deviceset="L_PORT" device=""/>
 <part name="U$2" library="UKN_schematic-port" deviceset="L_PORT" device=""/>
 <part name="U$3" library="UKN_schematic-port" deviceset="L_PORT" device=""/>
@@ -13103,7 +13103,7 @@ DIN A4, landscape with extra doc field</description>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="T1" library="stella2.1_bilateral_MainPCB" deviceset="NXP_60_2N7002B" device="" technology="KM"/>
 <part name="U$42" library="UKN_schematic-port" deviceset="L_PORT" device=""/>
-<part name="C9" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF"/>
+<part name="C9" library="UKN_rcl" deviceset="C-EU" device="C0402" value="0.1uF/6.3VDC"/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
 <part name="U$43" library="UKN_schematic-port" deviceset="L_PORT" device=""/>
 <part name="U$44" library="UKN_schematic-port" deviceset="L_PORT" device=""/>
@@ -13180,7 +13180,7 @@ DIN A4, landscape with extra doc field</description>
 <attribute name="VALUE" x="53.34" y="129.54" size="1.778" layer="96" font="vector" rot="MR0"/>
 </instance>
 <instance part="P+4" gate="VCC" x="210.82" y="83.82" smashed="yes">
-<attribute name="VALUE" x="208.28" y="82.55" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="VALUE" x="208.28" y="85.09" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
 <instance part="P+5" gate="VCC" x="101.6" y="73.66" smashed="yes">
 <attribute name="VALUE" x="101.6" y="76.2" size="1.778" layer="96" font="vector" rot="R180"/>
@@ -13220,8 +13220,8 @@ DIN A4, landscape with extra doc field</description>
 <attribute name="NAME" x="219.456" y="77.47" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="C2" gate="G$1" x="137.16" y="68.58" smashed="yes" rot="R270">
-<attribute name="VALUE" x="141.478" y="72.898" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="135.636" y="73.66" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="146.558" y="65.278" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="135.636" y="71.12" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="X5" gate="G$1" x="15.24" y="152.4" smashed="yes" rot="MR180"/>
 <instance part="GND15" gate="1" x="25.4" y="142.24" smashed="yes" rot="MR0">
@@ -13231,19 +13231,19 @@ DIN A4, landscape with extra doc field</description>
 <attribute name="VALUE" x="162.56" y="165.1" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="C6A" gate="G$1" x="10.16" y="101.6" smashed="yes">
-<attribute name="NAME" x="14.224" y="100.711" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="14.224" y="98.171" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="11.684" y="103.251" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="18.669" y="87.884" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
 <instance part="C6" gate="G$1" x="60.96" y="124.46" smashed="yes">
 <attribute name="NAME" x="63.754" y="123.571" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="63.754" y="121.031" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="69.469" y="114.554" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
 <instance part="U1" gate="G$1" x="114.3" y="157.48" smashed="yes">
 <attribute name="NAME" x="110.49" y="149.098" size="1.778" layer="95" font="vector" rot="R180"/>
 <attribute name="VALUE" x="106.68" y="144.78" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="P+14" gate="VCC" x="210.82" y="175.26" smashed="yes">
-<attribute name="VALUE" x="207.01" y="173.99" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="VALUE" x="207.01" y="176.53" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
 <instance part="GND23" gate="1" x="210.82" y="134.62" smashed="yes">
 <attribute name="VALUE" x="208.28" y="132.08" size="1.778" layer="96" font="vector"/>
@@ -13253,8 +13253,8 @@ DIN A4, landscape with extra doc field</description>
 <attribute name="VALUE" x="194.31" y="156.21" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
 <instance part="C1" gate="G$1" x="137.16" y="160.02" smashed="yes" rot="R270">
-<attribute name="VALUE" x="141.478" y="164.338" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="135.636" y="165.1" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="146.558" y="156.718" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="135.636" y="162.56" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND27" gate="1" x="147.32" y="73.66" smashed="yes" rot="R270">
 <attribute name="VALUE" x="162.56" y="73.66" size="1.778" layer="96" font="vector"/>
@@ -13280,7 +13280,7 @@ DIN A4, landscape with extra doc field</description>
 <attribute name="VALUE" x="100.33" y="115.57" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="C3" gate="G$1" x="139.7" y="139.7" smashed="yes" rot="R270">
-<attribute name="VALUE" x="141.478" y="144.018" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="VALUE" x="144.018" y="144.018" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="136.144" y="138.43" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="GND18" gate="1" x="129.54" y="139.7" smashed="yes" rot="R270">
@@ -13311,10 +13311,10 @@ DIN A4, landscape with extra doc field</description>
 </instance>
 <instance part="U$42" gate="G$2" x="91.44" y="88.9" smashed="yes" rot="R180"/>
 <instance part="U4" gate="G$1" x="205.74" y="152.4" smashed="yes">
-<attribute name="VALUE" x="200.66" y="172.72" size="1.778" layer="96"/>
+<attribute name="VALUE" x="215.9" y="160.02" size="1.778" layer="96"/>
 </instance>
 <instance part="U5" gate="G$1" x="205.74" y="60.96" smashed="yes">
-<attribute name="VALUE" x="200.66" y="81.28" size="1.778" layer="96"/>
+<attribute name="VALUE" x="218.44" y="66.04" size="1.778" layer="96"/>
 </instance>
 <instance part="X1" gate="G$1" x="157.48" y="160.02" smashed="yes" rot="R180"/>
 <instance part="X2" gate="G$1" x="157.48" y="165.1" smashed="yes" rot="R180"/>
@@ -13739,7 +13739,7 @@ DIN A4, landscape with extra doc field</description>
 <attribute name="VALUE" x="12.7" y="133.35" size="1.778" layer="96" font="vector" rot="MR0"/>
 </instance>
 <instance part="C7" gate="G$1" x="116.84" y="157.48" smashed="yes" rot="R90">
-<attribute name="VALUE" x="122.428" y="161.798" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="VALUE" x="132.588" y="161.798" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="114.046" y="154.94" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="LED1" gate="G$1" x="33.02" y="109.22" smashed="yes" rot="R270">
@@ -13824,14 +13824,14 @@ DIN A4, landscape with extra doc field</description>
 <attribute name="VALUE" x="38.1" y="76.2" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="C8" gate="G$1" x="15.24" y="88.9" smashed="yes">
-<attribute name="VALUE" x="8.382" y="84.582" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="9.398" y="76.962" size="1.778" layer="96" font="vector" rot="R90"/>
 <attribute name="NAME" x="11.176" y="88.9" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND20" gate="1" x="241.3" y="157.48" smashed="yes" rot="R90">
 <attribute name="VALUE" x="248.92" y="160.02" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
 <instance part="C10" gate="G$1" x="226.06" y="38.1" smashed="yes">
-<attribute name="VALUE" x="226.822" y="33.782" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="229.362" y="33.782" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="227.076" y="38.1" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="U$1" gate="G$2" x="53.34" y="116.84" smashed="yes"/>

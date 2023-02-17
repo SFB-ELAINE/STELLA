@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -10,8 +10,8 @@
 <grid distance="0.025" unitdist="mm" unit="mm" style="lines" multiple="4" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
 <layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
@@ -34,28 +34,28 @@
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -226,7 +226,7 @@
 <text x="-10.525" y="-0.9" size="1.016" layer="105">15</text>
 <text x="-10.55" y="-2.2" size="1.016" layer="105">16</text>
 <text x="-10.575" y="-3.5" size="1.016" layer="105">17</text>
-<text x="-19.4" y="-8.95" size="1.016" layer="105">1 - 8: Extension bus (nur optional)</text>
+<text x="-19.4" y="-8.95" size="1.016" layer="105">1 - 8: Extension bus (optional)</text>
 <text x="-19.55" y="-11.15" size="1.016" layer="105">13-16: Programming adapter 1.27 mm</text>
 </plain>
 <libraries>
@@ -1874,43 +1874,43 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="UKN_rcl" package="C0402" value="4.7uF" x="1.47" y="4.23" smashed="yes" rot="MR0">
+<element name="C1" library="UKN_rcl" package="C0402" value="4.7uF/6.3VDC" x="1.47" y="4.23" smashed="yes" rot="MR0">
 <attribute name="NAME" x="0.78" y="4.115" size="0.254" layer="26" font="vector" rot="MR0"/>
 <attribute name="VALUE" x="0.805" y="4.1" size="0.3048" layer="28" rot="MR0"/>
 </element>
-<element name="C10" library="UKN_rcl" package="C0402" value="0.1uF" x="2.15" y="-2.35" smashed="yes" rot="MR270">
+<element name="C10" library="UKN_rcl" package="C0402" value="0.1uF/6.3VDC" x="2.15" y="-2.35" smashed="yes" rot="MR270">
 <attribute name="NAME" x="1.765" y="-1.385" size="0.254" layer="26" font="vector" rot="MR180"/>
 <attribute name="VALUE" x="1.69" y="-1.395" size="0.3048" layer="28" rot="MR180"/>
 </element>
-<element name="C2" library="UKN_rcl" package="C0402" value="4.7uF" x="1.5" y="5.05" smashed="yes" rot="MR0">
+<element name="C2" library="UKN_rcl" package="C0402" value="4.7uF/6.3VDC" x="1.5" y="5.05" smashed="yes" rot="MR0">
 <attribute name="NAME" x="0.785" y="4.96" size="0.254" layer="26" font="vector" rot="MR0"/>
 <attribute name="VALUE" x="0.81" y="4.87" size="0.3048" layer="28" rot="MR0"/>
 </element>
-<element name="C3" library="UKN_rcl" package="C0402" value="0.1uF" x="1.5" y="3.2" smashed="yes" rot="MR0">
+<element name="C3" library="UKN_rcl" package="C0402" value="0.1uF/6.3VDC" x="1.5" y="3.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="0.81" y="3.11" size="0.254" layer="26" font="vector" rot="MR0"/>
 <attribute name="VALUE" x="0.835" y="3.07" size="0.3048" layer="28" rot="MR0"/>
 </element>
-<element name="C5" library="UKN_rcl" package="C0402" value="0.1uF" x="-3.25" y="-4" smashed="yes" rot="MR180">
+<element name="C5" library="UKN_rcl" package="C0402" value="0.1uF/6.3VDC" x="-3.25" y="-4" smashed="yes" rot="MR180">
 <attribute name="NAME" x="-3.435" y="-4.385" size="0.254" layer="26" font="vector" rot="MR180"/>
 <attribute name="VALUE" x="-3.66" y="-4.47" size="0.3048" layer="28" rot="MR180"/>
 </element>
-<element name="C6" library="eZ430-RF2500T_HW-V1.0_20070403" package="RCL_C0805" value="100uF" x="-1.05" y="-3.75" smashed="yes" rot="MR90">
+<element name="C6" library="eZ430-RF2500T_HW-V1.0_20070403" package="RCL_C0805" value="100uF/6.3VDC" x="-1.05" y="-3.75" smashed="yes" rot="MR90">
 <attribute name="NAME" x="-1.215" y="-2.34" size="0.254" layer="26" font="vector" rot="MR180"/>
 <attribute name="VALUE" x="-1.685" y="-2.226" size="0.3048" layer="28" rot="MR180"/>
 </element>
-<element name="C6A" library="eZ430-RF2500T_HW-V1.0_20070403" package="RCL_C0805" value="100uF" x="0.6" y="-4.05" smashed="yes" rot="MR90">
+<element name="C6A" library="eZ430-RF2500T_HW-V1.0_20070403" package="RCL_C0805" value="100uF/6.3VDC" x="0.6" y="-4.05" smashed="yes" rot="MR90">
 <attribute name="NAME" x="0.28" y="-2.595" size="0.254" layer="26" font="vector" rot="MR180"/>
 <attribute name="VALUE" x="-0.035" y="-2.526" size="0.3048" layer="28" rot="MR180"/>
 </element>
-<element name="C7" library="UKN_rcl" package="C0402" value="0.1uF" x="1.5" y="2.4" smashed="yes" rot="MR0">
+<element name="C7" library="UKN_rcl" package="C0402" value="0.1uF/6.3VDC" x="1.5" y="2.4" smashed="yes" rot="MR0">
 <attribute name="NAME" x="0.81" y="2.31" size="0.254" layer="26" font="vector" rot="MR0"/>
 <attribute name="VALUE" x="0.785" y="2.295" size="0.3048" layer="28" rot="MR0"/>
 </element>
-<element name="C8" library="UKN_rcl" package="C0402" value="0.1uF" x="2.15" y="-4.85" smashed="yes" rot="MR270">
+<element name="C8" library="UKN_rcl" package="C0402" value="0.1uF/6.3VDC" x="2.15" y="-4.85" smashed="yes" rot="MR270">
 <attribute name="NAME" x="1.89" y="-3.96" size="0.254" layer="26" font="vector" rot="MR180"/>
 <attribute name="VALUE" x="1.59" y="-5.52" size="0.3048" layer="28" rot="MR180"/>
 </element>
-<element name="C9" library="UKN_rcl" package="C0402" value="0.1uF" x="-0.92" y="-0.96" smashed="yes" rot="MR180">
+<element name="C9" library="UKN_rcl" package="C0402" value="0.1uF/6.3VDC" x="-0.92" y="-0.96" smashed="yes" rot="MR180">
 <attribute name="NAME" x="-1.13" y="-0.32" size="0.254" layer="26" font="vector" rot="MR180"/>
 <attribute name="VALUE" x="-1.105" y="-0.28" size="0.3048" layer="28" rot="MR180"/>
 </element>
